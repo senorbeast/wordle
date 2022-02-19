@@ -7,8 +7,14 @@ function App() {
 
     function handleKeyUp(e) {
         var letter = `${e.key}`;
-        setGuess((prev) => prev + letter);
+        setGuess((prev) => {
+            // console.log(guess, prev);
+            return prev + letter;
+        });
+        // console.log(guess);
     }
+    //? Possible Conclusion: React state not accessible in non react components (vanilla javascript fxn)
+    // But setState is accessible
 
     useEffect(() => {
         document.addEventListener("keyup", handleKeyUp);
@@ -17,7 +23,7 @@ function App() {
             document.removeEventListener("keyup", handleKeyUp);
         };
     }, []);
-    //Empty array, run many times
+    //? Empty array, run many times
     //If no array, runs only once
     //state dependency array -> runs if state changes (State sideEffect)
 
