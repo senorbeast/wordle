@@ -59,8 +59,13 @@
 
 .tile {
     display: grid;
-    width: 5em;
-    height: 5em;
+    width: 5rem;
+    height: 5rem;
     /* background: greenyellow; */
     border: 5px solid black;
+    font-size: 4em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }

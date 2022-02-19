@@ -7,6 +7,7 @@ export default function Row({guess}){
   // guess is a state -> if guess changes rerender
   // but if guessArray changes no rendering happens
 
+  // TODO: We could direct get individual char from word
   const [gArr, setgArr] = useState(getArray(guess))
   useEffect(() => {
     setgArr(getArray(guess))
