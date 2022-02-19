@@ -44,7 +44,6 @@
     width: auto;
     height: auto;
     grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: auto auto auto auto auto;
     background: red;
     border: 1px solid black;
     gap: 5px;
@@ -54,4 +53,9 @@
     width: 50px;
     height: 50px;
     background: greenyellow;
+}
+.row {
+   grid-template-columns: auto auto auto auto auto ;
+   display: grid;
+   gap : 5px;
 }

@@ -4,8 +4,7 @@ export default function Row(){
 
   return(
     <>
-      <div className = 'Row'>
-        <Tile/>
+      <div className = 'row'>
         <Tile/>
         <Tile/>
         <Tile/>
