@@ -23,7 +23,7 @@ export default function TileGrid() {
       <Row/>
       <Row/>
       <Row/>
-      <Row/>Plan
+      <Row/>
     </div>
     </>
   )
