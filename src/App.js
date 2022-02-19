@@ -2,12 +2,18 @@ import "./App.css";
 import TileGrid from "./TileGrid/index";
 import { useEffect, useState } from "react";
 
+const LETTER_LENGHT = 5;
+
 function App() {
     const [guess, setGuess] = useState("");
 
     function handleKeyUp(e) {
         var letter = `${e.key}`;
         setGuess((prev) => {
+            if (prev.length === LETTER_LENGHT) {
+                return prev;
+            }
+            var newGuess = prev + letter;
             // console.log(guess, prev);
             return prev + letter;
         });

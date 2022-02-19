@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import Row from './Row'
 
 // Coponent divison:
@@ -14,11 +13,11 @@ import Row from './Row'
 
 
 
-export default function TileGrid() {
+export default function TileGrid({guess}) {
   return (
     <>
     <div className = 'tileGrid'>
-      <Row/>
+      <Row guess ={guess}/>
       <Row/>
       <Row/>
       <Row/>

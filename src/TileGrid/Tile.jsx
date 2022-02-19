@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Tile() {
+export default function Tile({letter}) {
   return (
-    <div className="tile">
+    <div className="tile">{letter}
         </div>
         )}
 
