@@ -1,37 +1,31 @@
 import "./App.css";
 import TileGrid from "./TileGrid/index";
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 function App() {
-    const [word, setWord] = useState('');
+    const [guess, setGuess] = useState("");
+
+    function handleKeyUp(e) {
+        var letter = `${e.key}`;
+        setGuess((prev) => prev + letter);
+    }
 
     useEffect(() => {
+        document.addEventListener("keyup", handleKeyUp);
 
-    const log = document.getElementById('log');
-
-    document.addEventListener('keypress', logKey);
-    var letter;
-    
-   
-    function logKey(e) {
-        var letter = `${e.key}`
-        setWord((prev => prev + letter))
-    console.log(letter)
-        
-  }
-  return ()=>{
-  }
-    }, [])
+        return () => {
+            document.removeEventListener("keyup", handleKeyUp);
+        };
+    }, []);
+    //Empty array, run many times
+    //If no array, runs only once
+    //state dependency array -> runs if state changes (State sideEffect)
 
     return (
         <div className="App" id="log">
-            <header className="App-header">
-            </header>
-            <TileGrid></TileGrid>
+            <TileGrid guess={guess}></TileGrid>
         </div>
     );
 }
-
-
 
 export default App;
